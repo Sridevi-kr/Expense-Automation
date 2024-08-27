@@ -1,7 +1,7 @@
 
 # This file is used to host all the common patterns
 
-ID=$(id -u)
+ID=$(id -u) # to check whether the user is a root user. For root user the id -u is zero
 COLOR() {
     echo -e "\e[35m $* \e[0m"
 } 

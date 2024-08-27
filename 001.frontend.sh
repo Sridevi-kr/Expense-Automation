@@ -3,11 +3,12 @@
 COMPONENT="frontend"
 LOG="/tmp/frontend.log"
 
-source common.sh                # This will pull all the functions and the available variables from this file and make it available locally to this script
+source common.sh   # This will pull all the functions and the available variables from this file and make it available locally to this script
 
-if [ -f proxy.conf ] ; then 
+if [ -f proxy.conf ] ; then # validating if proxy file is there or not
     COLOR Proxy File Presense 
-    stat $? 
+    stat $? #$? This will show the exit code of the previous command. If the execution of the previous command is successful exit code is 0
+    #if there is failure exit code is 1
 else 
     echo -e "\e[31m proxy.conf is not present, ensure you supply it \e[0m"
     exit 1
