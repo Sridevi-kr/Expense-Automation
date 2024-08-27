@@ -27,6 +27,7 @@ systemctl enable nginx &>> $LOG
 stat $?
 
 COLOR Performing a Cleanup
+rm -rf /usr/share/nginx/html/* &>> $LOG
 stat $?
 
 COLOR Downloading $COMPONENT
